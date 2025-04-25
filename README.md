@@ -1,4 +1,5 @@
 # Snake Game
+🐍 Snake Game on TFT Display
 Creating a snake game using PlatformIO and Wokwi simulation. This project is an advanced version of the classic Snake game designed for Arduino using the Adafruit ILI9341 TFT display. It features multiple gameplay levels with increasing complexity:
 
 Level 1: Basic snake and red food
