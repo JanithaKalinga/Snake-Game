@@ -275,9 +275,9 @@ void spawn_apple() {
 
 // Define other functions like draw_appleandsnake(), draw_logo(), gameover(), reset_game(), etc.
 
-void draw_design() { //design vom Spielbildschirm
-  tft.fillScreen(ILI9341_DARKGREEN);      //grüner Hintergrund
-  tft.drawRect(9, 29, 222, 282, ILI9341_BLACK); //Rahmen
+void draw_design() { 
+  tft.fillScreen(ILI9341_DARKGREEN);      
+  tft.drawRect(9, 29, 222, 282, ILI9341_BLACK); 
 
   tft.setCursor(50, 5);
   tft.setTextColor(ILI9341_BLACK);
@@ -288,7 +288,7 @@ void draw_design() { //design vom Spielbildschirm
   draw_apple();
 }
 
-void draw_score () { //resetet & zeichnet Score
+void draw_score () { 
   tft.setCursor(175, 5);
   tft.setTextSize(3);
   tft.setTextColor(ILI9341_DARKGREEN);
@@ -300,7 +300,7 @@ void draw_score () { //resetet & zeichnet Score
   tft.println(score);
 }
 
-void draw_appleandsnake() { //print Apfel/Schlange auf Titelscreen
+void draw_appleandsnake() { 
 
   tft.fillRect(80, 30, 130, 10, ILI9341_ORANGE);
   tft.fillRect(200, 30, 10, 70, ILI9341_ORANGE);
@@ -340,7 +340,7 @@ void draw_starttext(){  //print Text auf Startbildschirm
   tft.setCursor(40, 300);
   tft.setTextColor(ILI9341_WHITE);
   tft.setTextSize(1);
-  tft.println("- created by Philipp & Max -");
+  tft.println("- created by Janitha & Anupa -");
 }
 
 void draw_apple() { //print Apfel
@@ -353,8 +353,8 @@ void draw_apple() { //print Apfel
   tft.drawLine(219, 13, 222, 3, ILI9341_MAROON);
 }
 
-void check_highscore() { //Highscore aktuallisieren & printen
-  if (score > highscore) {    //wenn neuer Score größer als Highscore -> neuer Highscore
+void check_highscore() { 
+  if (score > highscore) {    
     highscore = score;
 
     tft.setCursor(40, 230);           //print NEW HIGHSCORE
@@ -371,7 +371,7 @@ void check_highscore() { //Highscore aktuallisieren & printen
   tft.println(highscore);
 }
 
-void gameover() { //Gameover Bildschirm
+void gameover() { //Gameover 
   tft.fillScreen(ILI9341_BLACK);    //print GAME OVER
   tft.setCursor(15, 140);
   tft.setTextColor(ILI9341_RED);
@@ -396,8 +396,8 @@ void gameover() { //Gameover Bildschirm
   reset_game();
 }
 
-void reset_game() { //setzt aktuelles Game zurück
-  //Variablen reset
+void reset_game() { 
+  //Variable reset
   richtung = 1;
   score = 0;
   speed = 300;
@@ -409,7 +409,7 @@ void reset_game() { //setzt aktuelles Game zurück
     position[i][1] = 16 + i;
   }
 
-  game(); //Neustart game
+  game(); //Restart game
 }
 
 void place_barrier() {
